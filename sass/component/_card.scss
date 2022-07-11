@@ -1,0 +1,141 @@
+.card{
+    -moz-perspective: 115rem;
+    perspective: 115rem;
+    height: 50rem;
+    border-radius: 3px;
+    position: relative;
+    text-align: center;
+
+    @include respond(tab-port){
+        height: 30rem;
+        margin-bottom: 5rem;
+    }
+
+    &__side{
+        font-size: 4rem;
+        height: 50rem;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;   
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(black,.15);
+        transition: all .8s ease-in;
+
+        @include respond(tab-port){
+            height: 30rem;
+        }
+
+        &--front{
+            background-color: white;
+        }
+
+        &--back{
+            transform: rotateY(180deg);
+            &-1{
+                background-color: rgba(102, 51, 0, 0.6);
+            }
+            &-2{
+                background-color: rgba(165, 42, 42, 0.6);
+            }
+            &-3{
+                background-color: rgba(170, 199, 67, 0.6);
+            }
+            &-4{
+                background-color: rgba(129, 169, 215, 0.6);  
+            }
+        }
+    }
+
+    &:hover &__side--front{
+        transform:rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform:rotateY(0);
+    }
+
+
+    &__picture{
+        background-size: cover;
+        background-blend-mode: screen;
+        background-position: center;
+        height: 50rem;
+
+        @include respond(tab-port){
+            height: 30rem;
+        }
+
+
+        &--1{
+            background-image: linear-gradient(to right bottom, rgb(25, 25, 25), rgb(178, 178, 178)), url(../img/owl.jpg);
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom, rgb(25, 25, 25), rgb(178, 178, 178)), url(../img/tomato.jpg);
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, rgb(25, 25, 25), rgb(178, 178, 178)), url(../img/monster.jpg);
+        }
+        &--4{
+            background-image: linear-gradient(to right bottom, rgb(25, 25, 25), rgb(178, 178, 178)), url(../img/care.jpg);
+        }
+    }
+
+    &__heading{
+        position: absolute;
+        top : 0;
+        right: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 0 1rem;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        display: inline-block;
+        &-bottom{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgb(179, 179, 179);
+            font-size: 1.2rem;
+            width: 100%;
+
+        }
+    }
+
+    &__details{
+        position: absolute;
+        bottom: 0;
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: 700;
+        padding: 2rem 2rem;
+        background-color: rgba(240, 248, 255, 0.5);
+    }
+
+    &__details-skills{
+        position: absolute;
+        top : 35%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-weight: 700;   
+        padding: 0 1rem;
+        width: 80%;
+        background-color: rgba(240, 248, 255, 0.5);
+        ul {
+            list-style: none;
+            width: 90%;
+            margin: 0 auto;
+            li{
+                text-align: left;
+                font-size: 2.5rem;
+              
+                &:not(:last-child){
+                    border-bottom: 1px solid grey;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,36 @@
+.header {
+    height: 105vh;
+    // background-image:linear-gradient(to right bottom, rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.669)), url(../img/5137894.jpg);
+    background-image: url(../img/135.jpg);
+    background-size:cover;
+    background-position:top;
+    position: relative;
+
+    &__logo-text{
+        font-family: 'Libre Barcode 39 Text', cursive;
+        position: absolute;
+        font-size: 5rem;
+        top: 2rem;
+        left: 3rem;
+        color: black;
+    }
+
+
+    &__text-box {
+        text-align: right;
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, -50%);   
+
+        @include respond(tab-port){
+            text-align: right;
+            width: 60%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+}

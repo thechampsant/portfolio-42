@@ -1,0 +1,70 @@
+body {
+    font-family: 'Varela Round', sans-serif;
+    /*font-size: 16px;*/
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(rgb(60, 60, 60),1),
+        rgba(rgba(0,0,0),1)
+    );
+}
+
+.heading-primary {
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+    &-main {
+        display: block;
+        font-size: 3rem;
+        text-align: right;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: whitesmoke;
+        
+        @include respond(tab-port){
+            font-size: 2rem;
+            text-align: left;
+            color: white;
+        }
+    }
+
+    &-sub {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: right;
+        color: rgb(255, 219, 151);
+        @include respond(tab-port){
+            text-align: left;
+        }
+    }
+
+    &-name {
+        color: black;
+        font-weight: bolder;
+        font-size: 4rem;
+
+        @include respond(tab-port){
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    color: whitesmoke;
+    @include respond(tab-port){
+        font-size: 2.5rem;
+    }
+}
+
+.heading-tertiary {
+    font-size: 2rem;
+    color: whitesmoke;
+    @include respond(tab-port){
+        font-size: 1.5rem;
+        text-align: left;
+    }
+}
+
+.line-hr {
+    border: .1rem solid rgb(101, 101, 101);   
+}

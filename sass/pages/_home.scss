@@ -1,0 +1,18 @@
+.section-work {
+  padding: 2rem;
+}
+
+.section-project {
+   padding: 2rem;
+}
+
+.projects {
+  padding: 5rem;
+}
+
+.section-certification{
+  padding: 2rem;
+  @include respond(tab-port){
+    margin-top: -10rem;
+  }
+}

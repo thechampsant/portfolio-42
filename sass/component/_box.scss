@@ -1,0 +1,16 @@
+.box{
+    width: 100%;
+    height: 30rem;
+    display: inline-block;
+    &__shape{
+        width: inherit;
+        height: inherit;
+        background-color: aliceblue;    
+    }
+
+    @include respond(tab-port){
+        height: 5rem;
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+}

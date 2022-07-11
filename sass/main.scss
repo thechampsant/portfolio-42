@@ -1,0 +1,60 @@
+@import "abstract/variables";
+@import "abstract/mixins";
+
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/grid";
+@import "layout/footer";
+
+@import "base/typography";
+@import "base/animation";
+@import "base/utilities";
+
+@import "component/button";
+@import "component/composition";
+@import "component/feature_box";
+@import "component/card";
+@import "component/bg-video";
+@import "component/box";
+
+@import "pages/home";
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    
+    @include respond(phone){
+        font-size: 31.25%;
+     }
+     @include respond(tab-land){
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 50% 
+     }
+     @include respond(tab-port){
+        font-size: 50%; // 1rem to 8px, 8px/16px = 50%
+     }
+    // for 700px screen last tab-port is applied
+     @include respond(big-desktop){
+        font-size: 75%; //1rem is equal to 12px. 12/16
+     }
+}
+
+
+body {
+    box-sizing: border-box;
+    
+    padding:0 3rem;
+
+    @include respond(tab-port){
+        padding: 0; // 1rem to 8px, 8px/16px = 50%
+     }
+
+}
+
